@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""My square module"""
 
 
 class Square:
@@ -7,6 +8,7 @@ class Square:
         size
     some attributes are protected from input.
     """
+
     def __init__(self, size=0):
         """
         initialization function for our square clasee
@@ -14,11 +16,13 @@ class Square:
         if self.__validate_size(size):
             self.__size = size
 
+
     def __eq__(self, other):
         """
         used by == to check equality
         """
         return (self.area() == other.area())
+
 
     def __ne__(self, other):
         """
