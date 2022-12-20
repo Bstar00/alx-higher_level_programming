@@ -8,6 +8,7 @@ class Square:
         size
     some attributes are protected from input.
     """
+
     def __init__(self, size=0):
         """
         initialization function for our square clasee
