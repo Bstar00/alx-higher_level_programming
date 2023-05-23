@@ -1,12 +1,18 @@
 #!/usr/bin/node
-// Reads and prints the content of a file
+// Read and display file content
 
-const argv = process.argv;
-let fs = require('fs');
-fs.readFile(argv[2], 'utf8', function (err, data) {
-  if (err) {
-    console.log(err);
-  } else {
-    console.log(data);
-  }
-});
+const fs = require('fs');
+
+function readFileContent (filePath) {
+  fs.readFile(filePath, 'utf-8', (error, content) => {
+    if (error) {
+      console.error(error);
+    } else {
+      console.log(content);
+    }
+  });
+}
+
+// Usage example
+const filePath = process.argv[2]; // Get the file path from command line arguments
+readFileContent(filePath);
